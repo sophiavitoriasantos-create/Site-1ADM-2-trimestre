@@ -52,6 +52,7 @@
         <p>Sejam bem-vindas, venham conhecer e aprender mais sobre maquiagem</p>
         <p class="art">Por: Sophia Santos</p>
         <button>🩩 <span>0</span></button>
+        <button>🩶 <span>0</span></button>
     </div>
 </main>
 
@@ -60,13 +61,14 @@
 </body>
 
 <script>
-  const botao = document.querySelector("button");
+  const botoes = document.querySelectorAll("main button");
+  botoes.forEach(function(botao){
   botao.addEventListener("click", botaoClicado); // As aspas fecham antes da vírgula
 
   function botaoClicado() {
       console.log("fui clicado");
       let texto = botao.querySelector("span");
       texto.textContent++; // Acessa o texto do span e incrementa +1
-  }
+  }});
 </script>
 </html>
